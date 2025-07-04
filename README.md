@@ -6,7 +6,7 @@
 
 ## Usage
 
-```
+```javascript
 const { WeightedValue, WeightedPick } = require('weighted-pick');
 
 const picker = new WeightedPick([
