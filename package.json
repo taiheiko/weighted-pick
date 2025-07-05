@@ -8,7 +8,7 @@
     "test": "jest"
   },
   "author": "Taisia Heiko",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com:taiheiko/weighted-pick.git"
