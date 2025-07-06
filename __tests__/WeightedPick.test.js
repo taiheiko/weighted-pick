@@ -1,4 +1,4 @@
-const { WeightedValue, WeightedPick } = require('../');
+import { WeightedValue, WeightedPick } from '..';
 
 describe('WeightedPick', () => {
   test('2 values, 50%/50%, 1K times', () => {
