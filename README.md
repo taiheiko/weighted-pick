@@ -6,16 +6,28 @@
 
 ## Usage
 
+### TypeScript
+```typescript
+import {WeightedPick} from 'weighted-pick';
+
+const picker = new WeightedPick([
+    {value: 0, weight: 1},
+    {value: 1, weight: 1},
+]);
+
+const values = picker.pickValues(5);
+```
+
+### JavaScript
 ```javascript
-const { WeightedValue, WeightedPick } = require('weighted-pick');
+import {WeightedValue, WeightedPick} from 'weighted-pick';
 
 const picker = new WeightedPick([
     new WeightedValue(0, 1),
-    new WeightedValue(1, 1)
+    new WeightedValue(1, 1),
 ]);
 
-const n = 1000;
-const values = picker.pickValues(n);
+const values = picker.pickValues(5);
 ```
 
 ## Based on
