@@ -1,4 +1,4 @@
-class WeightedValue {
+export class WeightedValue {
 
     constructor(value, weight) {
         this.value = value;
@@ -7,7 +7,7 @@ class WeightedValue {
 
 }
 
-class WeightedPick {
+export class WeightedPick {
     #weights;
     #ranges;
 
@@ -50,9 +50,4 @@ class WeightedPick {
         }
         return values;
     }
-}
-
-module.exports = {
-    WeightedValue,
-    WeightedPick,
 }
