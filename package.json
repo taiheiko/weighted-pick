@@ -1,6 +1,6 @@
 {
   "name": "weighted-pick",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A library to pick random elements with weighted probability.",
   "main": "index.js",
   "type": "module",
