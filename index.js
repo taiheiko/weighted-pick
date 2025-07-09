@@ -12,7 +12,13 @@ export class WeightedPick {
     #ranges;
 
     constructor(weights) {
-        // TODO: Check for empty input data.
+        if (!Array.isArray(weights)) {
+            throw new Error('Weights is not an array');
+        }
+        if (weights.length === 0) {
+            throw new Error('Weights is empty');
+        }
+
         this.#weights = weights;
 
         // [[start1, end1), [start2, end2), ...]

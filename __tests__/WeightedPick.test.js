@@ -82,6 +82,14 @@ describe('WeightedPick', () => {
       new WeightedValue(2, NaN)
     ])).toThrowError(/NaN weight is not allowed/);
   });
+
+  test('fails on nullable weights', () => {
+    expect(() => new WeightedPick(null)).toThrowError(/Weights is not an array/);
+  });
+
+  test('fails on empty weights', () => {
+    expect(() => new WeightedPick([])).toThrowError(/Weights is empty/);
+  });
 });
 
 function histogram (values) {
