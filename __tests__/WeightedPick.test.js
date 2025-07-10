@@ -83,7 +83,14 @@ describe('WeightedPick', () => {
     ])).toThrowError(/NaN weight is not allowed/);
   });
 
-  test('fails on nullable weights', () => {
+  test.each([
+    [null],
+    [undefined],
+    ['a string'],
+    [-1],
+    [{}],
+    [true]
+  ])('fails on non-array weights: %s', () => {
     expect(() => new WeightedPick(null)).toThrowError(/Weights is not an array/);
   });
 
