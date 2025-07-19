@@ -26,6 +26,9 @@ export class WeightedPick {
             if (isNaN(w.weight)) {
                 throw new Error('NaN weight is not allowed');
             }
+            if (w.weight <= 0) {
+                throw new Error(`Negative or zero weight is not allowed: ${w.weight}`);
+            }
             return acc + w.weight;
         }, 0);
 

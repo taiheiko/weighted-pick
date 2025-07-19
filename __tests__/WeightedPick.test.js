@@ -1,3 +1,4 @@
+import { expect } from 'vitest';
 import { WeightedValue, WeightedPick } from '..';
 
 describe('WeightedPick', () => {
@@ -96,6 +97,16 @@ describe('WeightedPick', () => {
 
   test('fails on empty weights', () => {
     expect(() => new WeightedPick([])).toThrowError(/Weights is empty/);
+  });
+
+  test.each([
+    [-1],
+    [-0.5],
+    [0],
+  ])('fails on negative or zero weights: %d', (weight) => {
+    expect(() => new WeightedPick([
+      new WeightedValue(1, weight),
+    ])).toThrowError(/Negative or zero weight is not allowed: .*/);
   });
 });
 
